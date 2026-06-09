@@ -1,44 +1,47 @@
-# vCard - Personal portfolio
+# Luis Manco — QA Analyst Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+![GitHub repo size](https://img.shields.io/github/repo-size/AMluisXVI/AMluisXVI.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-amluis16-0A66C2?logo=linkedin)](https://linkedin.com/in/amluis16)
+[![GitHub](https://img.shields.io/badge/GitHub-AMluisXVI-181717?logo=github)](https://github.com/AMluisXVI)
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+Personal portfolio website showcasing my QA projects, skills, and experience. Built on the [vCard](https://github.com/codewithsadee/vcard-personal-portfolio) template by [codewithsadee](https://github.com/codewithsadee).
 
-## Demo
+**Live:** [amluisxvi.github.io](https://amluisxvi.github.io)
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## About
 
-## Prerequisites
+QA Analyst with Mechatronics Engineering background and structured QA Engineering training at TripleTen. Specializes in:
 
-Before you begin, ensure you have met the following requirements:
+- **Test Automation** — Selenium, Playwright, Pytest, POM
+- **API Testing** — Postman, REST, Python + requests
+- **Functional Testing** — Equivalence partitioning, BVA, regression
+- **Mobile Testing** — Android Studio, emulators, crash analysis
+- **Languages & Tools** — Python, SQL, JavaScript, Git, Jira, DevTools
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+## Download CV
 
-## Installing vCard
+The site includes a downloadable CV (PDF) generated from the same resume content. Click **Download CV** in the sidebar to view and save it.
 
-To install **vCard**, follow these steps:
+## Projects Included
 
-Linux and macOS:
+| Project | Category |
+|---------|----------|
+| Regression Testing — Urban Routes | Manual Testing |
+| Test Design — Carpool Feature | Manual Testing |
+| Cross-Browser Testing — Urban Routes | Manual Testing |
+| API Testing — Urban Grocers | API Testing |
+| Console & SQL — Linux + PostgreSQL | Manual Testing |
+| Mobile Testing — Urban Lunch | Mobile Testing |
+| API Automation — Urban Grocers | Automation |
+| UI Automation — Urban Routes | Automation |
+| Full QA Cycle — Urban Scooter | API Testing |
 
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+---
 
-Windows:
+## Template Credits
 
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
+This portfolio is based on [vCard Personal Portfolio](https://github.com/codewithsadee/vcard-personal-portfolio) by [codewithsadee](https://github.com/codewithsadee) — a fully responsive personal portfolio template built with HTML, CSS, and JavaScript.
 
 ## License
 
-MIT
+[MIT](./LICENSE)
