@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Manco — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+    .page {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+      color: #fff;
+      padding: 40px 48px 32px;
+    }
+    .header h1 {
+      font-size: 28pt;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .header .title {
+      font-size: 13pt;
+      font-weight: 500;
+      color: #f0c040;
+      margin-top: 4px;
+    }
+    .header .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+      margin-top: 16px;
+      font-size: 9.5pt;
+      color: #ccc;
+    }
+    .header .contact-row a {
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+    .header .contact-row a:hover { color: #f0c040; }
+    /* Body */
+    .body { padding: 36px 48px 40px; }
+    .section { margin-bottom: 24px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-title {
+      font-size: 12pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #1a1a2e;
+      border-bottom: 2px solid #f0c040;
+      padding-bottom: 4px;
+      margin-bottom: 14px;
+    }
+    /* Summary */
+    .summary p {
+      font-size: 10pt;
+      color: #333;
+    }
+    /* Experience & Education */
+    .entry { margin-bottom: 18px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+    }
+    .entry-title {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+    .entry-org {
+      font-weight: 500;
+      color: #555;
+    }
+    .entry-date {
+      font-size: 9pt;
+      color: #888;
+      white-space: nowrap;
+    }
+    .entry-desc {
+      font-size: 9.5pt;
+      color: #444;
+      margin-top: 4px;
+      line-height: 1.55;
+    }
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 28px;
+    }
+    .skill-group { break-inside: avoid; }
+    .skill-group h4 {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 2px;
+    }
+    .skill-group p {
+      font-size: 9pt;
+      color: #555;
+    }
+    /* Certifications */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 28px;
+    }
+    .cert-group { break-inside: avoid; }
+    .cert-group h4 {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 2px;
+    }
+    .cert-group ul {
+      list-style: none;
+      padding: 0;
+    }
+    .cert-group li {
+      font-size: 9pt;
+      color: #555;
+      line-height: 1.6;
+    }
+    /* Download button */
+    .btn-row {
+      text-align: center;
+      padding: 0 48px 32px;
+    }
+    .btn-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1a1a2e;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 11pt;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-pdf:hover { background: #2d2d44; }
+    .btn-pdf svg { width: 18px; height: 18px; fill: #f0c040; }
+    /* Print */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+        font-size: 10pt;
+      }
+      .page {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .header { padding: 30px 40px 24px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .header h1 { font-size: 24pt; }
+      .header .title { font-size: 12pt; }
+      .body { padding: 28px 40px 20px; }
+      .section { margin-bottom: 18px; }
+      .btn-row { display: none; }
+      .entry { break-inside: avoid; }
+      .skills-grid, .cert-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      body { padding: 16px 10px; }
+      .header { padding: 24px 20px; }
+      .body { padding: 20px; }
+      .skills-grid, .cert-grid { grid-template-columns: 1fr; }
+      .entry-header { flex-direction: column; }
+      .btn-row { padding: 0 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Luis Manco</h1>
+    <div class="title">QA Analyst</div>
+    <div class="contact-row">
+      <span>Colombia</span>
+      <a href="mailto:amluis16@outlook.com">amluis16@outlook.com</a>
+      <a href="tel:+573024359784">+57 302 435 9784</a>
+      <a href="https://linkedin.com/in/amluis16" target="_blank">linkedin.com/in/amluis16</a>
+      <a href="https://github.com/AMluisXVI" target="_blank">github.com/AMluisXVI</a>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <!-- Summary -->
+    <section class="section summary">
+      <h2 class="section-title">Professional Summary</h2>
+      <p>Detail-oriented QA Analyst with hands-on experience in manual, automation, API, and mobile testing.
+      Background in mechatronics engineering with strong analytical thinking and methodical documentation skills.
+      Passionate about delivering quality software through structured testing, clear bug reporting, and continuous learning.</p>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">QA Analyst</span>
+          <span class="entry-date">Jul 2025 — Present</span>
+        </div>
+        <div class="entry-org">uTest</div>
+        <div class="entry-desc">
+          Review requirements, specifications, and design docs with a QA mindset for early defect detection.
+          Design test plans and functional test cases using equivalence partitioning and boundary value analysis.
+          Validate REST APIs with Postman: response codes, JSON structures, business logic. Use DevTools for
+          network diagnostics, performance analysis, and UI validation. Document and trace defects throughout
+          the SDLC, execute post-fix regressions, and prepare test data for end-to-end validation.
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">QA Projects</span>
+          <span class="entry-date">Oct 2024 — Jun 2025</span>
+        </div>
+        <div class="entry-org">TripleTen LatAm</div>
+        <div class="entry-desc">
+          E2E automation with Selenium WebDriver + POM: 9 tests covering complete taxi order flow with OTP
+          interception via CDP. API automation with Python + pytest + requests: 9 tests with equivalence class
+          and BVA coverage. REST API testing with Postman: 43 test cases across 3 endpoints, 25 bugs found
+          including 500-level server errors. Mobile functional testing on Android: 34-item checklist, identified
+          critical crash on geolocation denial. Executed 24 regression test cases on Urban Routes (web) with
+          bug reports in Jira. SQL queries: COUNT DISTINCT, GROUP BY, JOIN, CASE WHEN on PostgreSQL.
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Construction Supervisor Assistant</span>
+          <span class="entry-date">May 2024 — Jun 2025</span>
+        </div>
+        <div class="entry-org">Arevalo Patologia Plus</div>
+        <div class="entry-desc">
+          Supervised civil works contracts for restoration and maintenance. Documented and escalated
+          field anomalies, managed material requests, and produced daily technical reports.
+          Developed attention to detail and structured documentation skills transferable to QA.
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Engineering Assistant</span>
+          <span class="entry-date">Jan 2024 — Apr 2024</span>
+        </div>
+        <div class="entry-org">IMI Colombia / Yara / Cabot</div>
+        <div class="entry-desc">
+          Supported scheduled maintenance shutdowns at an ammonia plant. Coordinated contractors
+          under HSE and permit-to-work controls, documented non-conformities, and inspected
+          valve replacements, coatings, and welding — building a methodical, process-oriented mindset.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">QA Engineering Bootcamp</span>
+          <span class="entry-date">2024 — 2025</span>
+        </div>
+        <div class="entry-org">TripleTen LatAm</div>
+        <div class="entry-desc">
+          Full QA cycle: manual testing, test design, web & cross-browser, API testing,
+          mobile testing, console & SQL, API automation, UI automation.
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Mechatronics Engineering</span>
+          <span class="entry-date">2017 — 2023</span>
+        </div>
+        <div class="entry-org">Universidad Tecnológica de Bolívar</div>
+        <div class="entry-desc">COPNIA: 031259-0698088 BLV</div>
+      </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Test Automation</h4>
+          <p>Selenium, Playwright, Pytest, Page Object Model</p>
+        </div>
+        <div class="skill-group">
+          <h4>API Testing</h4>
+          <p>Postman, REST, JSON, Python + requests</p>
+        </div>
+        <div class="skill-group">
+          <h4>Functional Testing</h4>
+          <p>Test cases, equivalence partitioning, BVA, regression</p>
+        </div>
+        <div class="skill-group">
+          <h4>Mobile Testing</h4>
+          <p>Android Studio, AVD, permissions testing, crash analysis</p>
+        </div>
+        <div class="skill-group">
+          <h4>Languages &amp; Tools</h4>
+          <p>Python, SQL, JavaScript, Git, Jira, DevTools</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-group">
+          <h4>Open Bootcamp</h4>
+          <ul>
+            <li>Git — 07/11/2023</li>
+            <li>HTML &amp; CSS — 07/11/2023</li>
+            <li>Introducción a la Programación — 06/09/2023</li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h4>Google Actívate</h4>
+          <ul>
+            <li>Introducción al Desarrollo Web I (40 h) — 05/06/2023</li>
+            <li>Introducción al Desarrollo Web II (40 h) — 15/06/2023</li>
+          </ul>
+        </div>
+        <div class="cert-group">
+          <h4>SENA</h4>
+          <ul>
+            <li>SG-SST (50 h) — Oct. 2025 · Regional Huila</li>
+            <li>Controladores Lógicos Programables PLC I (40 h) — Mar. 2026 · Regional Tolima</li>
+            <li>Actualización del SG-SST (20 h) — Mar. 2026 · Regional Valle</li>
+            <li>Procesos para Software de Calidad (40 h) — Abr. 2026 · Regional Tolima</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Download button -->
+  <div class="btn-row">
+    <button class="btn-pdf" onclick="window.print()">
+      <svg viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z"/></svg>
+      Download PDF
+    </button>
+    <p style="margin-top:8px;font-size:9pt;color:#888;">Click &rarr; "Save as PDF" in the print dialog</p>
+  </div>
+
+</div>
+
+</body>
+</html>
