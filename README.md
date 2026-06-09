@@ -8,6 +8,8 @@ Personal portfolio website showcasing my QA projects, skills, and experience. Bu
 
 **Live:** [amluisxvi.github.io](https://amluisxvi.github.io)
 
+![Portfolio Screenshot](./website-demo-image/portfolio-screenshot.png "Luis Manco — QA Analyst Portfolio")
+
 ## About
 
 QA Analyst with Mechatronics Engineering background and structured QA Engineering training at TripleTen. Specializes in:
