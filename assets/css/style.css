@@ -1530,3 +1530,63 @@ article .contact-info :is(.contact-link, time, address) {
   .timeline-text { max-width: 700px; }
 
 }
+
+/* freeCodeCamp projects table */
+.fcc-projects { margin-top: 30px; }
+
+.fcc-desc {
+  color: var(--light-gray);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.fcc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: var(--fs-5);
+}
+
+.fcc-table thead th {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--white-1);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fcc-table tbody td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--light-gray);
+  vertical-align: top;
+}
+
+.fcc-table tbody tr:hover { background: hsla(0, 0%, 100%, 0.03); }
+
+.fcc-table tbody td:first-child {
+  font-weight: var(--fw-500);
+  white-space: nowrap;
+}
+
+.fcc-table tbody td:nth-child(3) {
+  color: var(--green-yellow);
+  text-align: center;
+  font-weight: var(--fw-600);
+}
+
+.fcc-table a {
+  color: var(--blue-2);
+  text-decoration: underline;
+}
+
+.fcc-table a:hover { color: var(--white-2); }
+
+@media (max-width: 768px) {
+  .fcc-table { font-size: var(--fs-6); }
+  .fcc-table thead th,
+  .fcc-table tbody td { padding: 8px 6px; }
+}
