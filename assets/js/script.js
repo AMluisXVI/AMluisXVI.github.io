@@ -317,6 +317,12 @@ const applyLanguage = function (lang) {
     }
   }
 
+  // Update CV link href based on active language
+  const cvLink = document.querySelector(".btn-cv");
+  if (cvLink) {
+    cvLink.setAttribute("href", lang === "es" ? "./cv-es.html" : "./cv.html");
+  }
+
   // Update language toggle button
   const langToggle = document.getElementById("lang-toggle");
   if (langToggle) {
