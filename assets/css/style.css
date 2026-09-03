@@ -1008,6 +1008,53 @@ article .contact-info :is(.contact-link, time, address) {
 
 
 /*-----------------------------------*\
+  #LANG TOGGLE
+\*-----------------------------------*/
+
+.lang-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--eerie-black-1);
+  border: 2px solid var(--jet);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: var(--transition-1);
+  line-height: 1;
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus {
+  background: var(--onyx);
+  border-color: var(--orange-yellow-crayola);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px hsla(45, 100%, 71%, 0.25);
+}
+
+.lang-toggle:active {
+  transform: scale(0.95);
+}
+
+/* mobile: ensure touch target and avoid navbar overlap */
+@media (max-width: 767px) {
+  .lang-toggle {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+
+/*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
 

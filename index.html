@@ -28,6 +28,14 @@
 <body>
 
   <!--
+    - #LANG TOGGLE BUTTON
+  -->
+
+  <button id="lang-toggle" class="lang-toggle" title="Switch to Español" aria-label="Switch to Spanish">🇺🇸</button>
+
+
+
+  <!--
     - #MAIN
   -->
 
@@ -52,7 +60,7 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <span data-i18n="sidebar.show_contacts">Show Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -72,7 +80,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email — Outlook</p>
+              <p class="contact-title" data-i18n="sidebar.email_outlook">Email — Outlook</p>
 
               <a href="mailto:amluis16@outlook.com" class="contact-link">amluis16@outlook.com</a>
             </div>
@@ -86,7 +94,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email — Gmail</p>
+              <p class="contact-title" data-i18n="sidebar.email_gmail">Email — Gmail</p>
 
               <a href="mailto:lmanco16@gmail.com" class="contact-link">lmanco16@gmail.com</a>
             </div>
@@ -100,7 +108,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title" data-i18n="sidebar.phone">Phone</p>
 
               <a href="tel:+573024359784" class="contact-link">+57 302 435 9784</a>
             </div>
@@ -114,7 +122,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title" data-i18n="sidebar.location">Location</p>
 
               <address>Colombia</address>
             </div>
@@ -128,7 +136,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
+              <p class="contact-title" data-i18n="sidebar.linkedin">LinkedIn</p>
 
               <a href="https://www.linkedin.com/in/amluis16" target="_blank" class="contact-link">amluis16</a>
             </div>
@@ -158,7 +166,7 @@
         <div class="cv-sidebar">
           <a href="./cv.html" target="_blank" class="btn-cv">
             <ion-icon name="download-outline"></ion-icon>
-            Download CV
+            <span data-i18n="sidebar.download_cv">Download CV</span>
           </a>
         </div>
 
@@ -183,19 +191,19 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link data-nav-value="about" data-i18n="nav.about">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link data-nav-value="resume" data-i18n="nav.resume">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link data-nav-value="portfolio" data-i18n="nav.portfolio">Portfolio</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link data-nav-value="contact" data-i18n="nav.contact">Contact</button>
           </li>
 
         </ul>
@@ -211,24 +219,24 @@
       <article class="about active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title" data-i18n="about.title">About me</h2>
         </header>
 
         <section class="about-text">
-          <p>
+          <p data-i18n="about.p1">
             I'm a QA Analyst with a Mechatronics Engineering background and structured QA Engineering training.
             I specialize in web test automation with Selenium and Playwright, REST API validation, and functional
             testing. I enjoy taking specifications and turning them into solid test cases that catch bugs before
             they reach production.
           </p>
 
-          <p>
+          <p data-i18n="about.p2">
             Before QA, I worked on-site supervising civil works and building pathology restoration projects — that
             field discipline of documenting, tracing, and escalating issues carries directly into how I approach
             defect tracking today.
           </p>
 
-          <p>
+          <p data-i18n="about.p3">
             I work as a QA Analyst on the uTest platform, where I review requirements, design test plans, and execute
             functional, exploratory, and regression testing on real-world applications for clients around the world.
             My time at TripleTen gave me a strong foundation across the full QA cycle — manual testing, test design,
@@ -243,7 +251,7 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What I'm doing</h3>
+          <h3 class="h3 service-title" data-i18n="about.services_title">What I'm doing</h3>
 
           <ul class="service-list">
 
@@ -254,9 +262,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Test Automation</h4>
+                <h4 class="h4 service-item-title" data-i18n="about.svc1_title">Test Automation</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" data-i18n="about.svc1_text">
                   Selenium, Playwright, Pytest. E2E suites with POM that actually scale.
                 </p>
               </div>
@@ -270,9 +278,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">API & Backend Testing</h4>
+                <h4 class="h4 service-item-title" data-i18n="about.svc2_title">API & Backend Testing</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" data-i18n="about.svc2_text">
                   REST API validation with Postman and Python. Status codes, JSON schemas, edge cases.
                 </p>
               </div>
@@ -286,9 +294,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Manual & Exploratory Testing</h4>
+                <h4 class="h4 service-item-title" data-i18n="about.svc3_title">Manual & Exploratory Testing</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" data-i18n="about.svc3_text">
                   Requirements analysis, test plans, bug reports with traceability. Regression and exploratory.
                 </p>
               </div>
@@ -302,9 +310,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile Testing</h4>
+                <h4 class="h4 service-item-title" data-i18n="about.svc4_title">Mobile Testing</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" data-i18n="about.svc4_text">
                   Android testing on emulators and real devices. Functional checklists, permission testing, crash detection.
                 </p>
               </div>
@@ -318,9 +326,9 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Field &amp; Site Engineering</h4>
+                <h4 class="h4 service-item-title" data-i18n="about.svc5_title">Field &amp; Site Engineering</h4>
 
-                <p class="service-item-text">
+                <p class="service-item-text" data-i18n="about.svc5_text">
                   Civil works supervision, building pathology, HSE compliance — a builder's eye for detail applied to test coverage.
                 </p>
               </div>
@@ -342,7 +350,7 @@
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" data-i18n="resume.title">Resume</h2>
         </header>
 
         <section class="timeline">
@@ -352,18 +360,18 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Experience</h3>
+            <h3 class="h3" data-i18n="resume.experience">Experience</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">QA Analyst — uTest</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.exp1_title">QA Analyst — uTest</h4>
 
               <span>Jul 2025 — Present</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp1_text">
                 Review requirements, specifications, and design docs with a QA mindset for early defect detection.
                 Design test plans and functional test cases using equivalence partitioning and boundary value analysis.
                 Validate REST APIs with Postman: response codes, JSON structures, business logic. Use DevTools for
@@ -375,11 +383,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">QA Projects — TripleTen LatAm</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.exp2_title">QA Projects — TripleTen LatAm</h4>
 
               <span>Oct 2024 — Jun 2025</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp2_text">
                 E2E automation with Selenium WebDriver + POM: 9 tests covering complete taxi order flow with OTP
                 interception via CDP. API automation with Python + pytest + requests: 9 tests with equivalence class
                 and BVA coverage. REST API testing with Postman: 43 test cases across 3 endpoints, 25 bugs found
@@ -392,11 +400,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Construction Supervisor Assistant — Arevalo Patologia Plus</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.exp3_title">Construction Supervisor Assistant — Arevalo Patologia Plus</h4>
 
               <span>May 2024 — Jun 2025</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp3_text">
                 Supervised civil works contracts for restoration and building pathology maintenance. Served as the
                 primary communication link between the pathology specialist and the field crew, translating findings
                 into clear work instructions. Documented and escalated field anomalies, managed material requests,
@@ -408,11 +416,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Engineering Assistant — IMI Colombia (Yara Ammonia Plant &amp; Cabot Carbon Black Plant)</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.exp4_title">Engineering Assistant — IMI Colombia (Yara Ammonia Plant &amp; Cabot Carbon Black Plant)</h4>
 
               <span>Jan 2024 — Apr 2024</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.exp4_text">
                 Supported scheduled maintenance shutdowns at two industrial plants: Yara Ammonia Plant and
                 Cabot Carbon Black Plant. Coordinated contractors under strict HSE and permit-to-work controls,
                 documented non-conformities, and inspected valve replacements, coatings, and welding — building
@@ -432,18 +440,18 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3" data-i18n="resume.education">Education</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">QA Engineering Bootcamp</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.edu1_title">QA Engineering Bootcamp</h4>
 
               <span>2024 — 2025</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.edu1_text">
                 TripleTen LatAm — Full QA cycle: manual testing, test design, web & cross-browser, API testing,
                 mobile testing, console & SQL, API automation, UI automation.
               </p>
@@ -452,11 +460,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Mechatronics Engineering</h4>
+              <h4 class="h4 timeline-item-title" data-i18n="resume.edu2_title">Mechatronics Engineering</h4>
 
               <span>2017 — 2023</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n="resume.edu2_text">
                 Universidad Tecnológica de Bolívar — COPNIA: 031259-0698088 BLV.
                 Seminar: Industrial Automation (2022). Seminar: Digital Transformation (2022).
               </p>
@@ -469,64 +477,64 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">QA Skills</h3>
+          <h3 class="h3 skills-title" data-i18n="resume.qa_skills">QA Skills</h3>
 
           <ul class="skills-list content-card">
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Manual &amp; Functional Testing</h5>
+                <h5 class="h5" data-i18n="resume.skill_manual_title">Manual &amp; Functional Testing</h5>
               </div>
-              <p class="skills-text">Test case design, equivalence partitioning, boundary value analysis, exploratory testing, regression, smoke &amp; sanity testing</p>
+              <p class="skills-text" data-i18n="resume.skill_manual_text">Test case design, equivalence partitioning, boundary value analysis, exploratory testing, regression, smoke &amp; sanity testing</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Test Automation</h5>
+                <h5 class="h5" data-i18n="resume.skill_auto_title">Test Automation</h5>
               </div>
-              <p class="skills-text">Selenium WebDriver, Playwright, Cypress, Pytest, Page Object Model, Mocha + Chai (Node.js)</p>
+              <p class="skills-text" data-i18n="resume.skill_auto_text">Selenium WebDriver, Playwright, Cypress, Pytest, Page Object Model, Mocha + Chai (Node.js)</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">API Testing</h5>
+                <h5 class="h5" data-i18n="resume.skill_api_title">API Testing</h5>
               </div>
-              <p class="skills-text">Postman, REST, JSON schema validation, Python + requests</p>
+              <p class="skills-text" data-i18n="resume.skill_api_text">Postman, REST, JSON schema validation, Python + requests</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Mobile Testing</h5>
+                <h5 class="h5" data-i18n="resume.skill_mobile_title">Mobile Testing</h5>
               </div>
-              <p class="skills-text">Android Studio, AVD/emulators, permissions testing, crash analysis</p>
+              <p class="skills-text" data-i18n="resume.skill_mobile_text">Android Studio, AVD/emulators, permissions testing, crash analysis</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Performance &amp; Load</h5>
+                <h5 class="h5" data-i18n="resume.skill_perf_title">Performance &amp; Load</h5>
               </div>
-              <p class="skills-text">JMeter (basic), load and stress testing fundamentals</p>
+              <p class="skills-text" data-i18n="resume.skill_perf_text">JMeter (basic), load and stress testing fundamentals</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">SDLC &amp; Tools</h5>
+                <h5 class="h5" data-i18n="resume.skill_sdlc_title">SDLC &amp; Tools</h5>
               </div>
-              <p class="skills-text">Agile/Scrum, Jira, Git, SQL (PostgreSQL), DevTools, CI/CD basics</p>
+              <p class="skills-text" data-i18n="resume.skill_sdlc_text">Agile/Scrum, Jira, Git, SQL (PostgreSQL), DevTools, CI/CD basics</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Programming Languages</h5>
+                <h5 class="h5" data-i18n="resume.skill_prog_title">Programming Languages</h5>
               </div>
-              <p class="skills-text">Python, JavaScript, SQL</p>
+              <p class="skills-text" data-i18n="resume.skill_prog_text">Python, JavaScript, SQL</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Languages</h5>
+                <h5 class="h5" data-i18n="resume.skill_lang_title">Languages</h5>
               </div>
-              <p class="skills-text">English (Full Professional), Spanish (Native)</p>
+              <p class="skills-text" data-i18n="resume.skill_lang_text">English (Full Professional), Spanish (Native)</p>
             </li>
 
           </ul>
@@ -535,64 +543,64 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">Soft Skills</h3>
+          <h3 class="h3 skills-title" data-i18n="resume.soft_skills">Soft Skills</h3>
 
           <ul class="skills-list content-card">
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Analytical Thinking</h5>
+                <h5 class="h5" data-i18n="resume.ss_analytical_title">Analytical Thinking</h5>
               </div>
-              <p class="skills-text">Methodical problem decomposition rooted in mechatronics engineering and QA test design</p>
+              <p class="skills-text" data-i18n="resume.ss_analytical_text">Methodical problem decomposition rooted in mechatronics engineering and QA test design</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Attention to Detail</h5>
+                <h5 class="h5" data-i18n="resume.ss_detail_title">Attention to Detail</h5>
               </div>
-              <p class="skills-text">Precision in test execution, defect reproduction, and spec analysis — sharpened through construction QA and field inspections</p>
+              <p class="skills-text" data-i18n="resume.ss_detail_text">Precision in test execution, defect reproduction, and spec analysis — sharpened through construction QA and field inspections</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Technical Communication</h5>
+                <h5 class="h5" data-i18n="resume.ss_comm_title">Technical Communication</h5>
               </div>
-              <p class="skills-text">Clear bug reports, test documentation, and requirements analysis with actionable detail for developers</p>
+              <p class="skills-text" data-i18n="resume.ss_comm_text">Clear bug reports, test documentation, and requirements analysis with actionable detail for developers</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Team Collaboration</h5>
+                <h5 class="h5" data-i18n="resume.ss_team_title">Team Collaboration</h5>
               </div>
-              <p class="skills-text">Cross-functional coordination with developers, PMs, and stakeholders — from field crew alignment to remote QA teams</p>
+              <p class="skills-text" data-i18n="resume.ss_team_text">Cross-functional coordination with developers, PMs, and stakeholders — from field crew alignment to remote QA teams</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Problem Solving</h5>
+                <h5 class="h5" data-i18n="resume.ss_problem_title">Problem Solving</h5>
               </div>
-              <p class="skills-text">Root cause analysis and creative test scenario design; escalated field anomalies now inform defect triage instincts</p>
+              <p class="skills-text" data-i18n="resume.ss_problem_text">Root cause analysis and creative test scenario design; escalated field anomalies now inform defect triage instincts</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Documentation</h5>
+                <h5 class="h5" data-i18n="resume.ss_doc_title">Documentation</h5>
               </div>
-              <p class="skills-text">Structured test plans, traceability matrices, and technical reports — a discipline carried from civil works supervision</p>
+              <p class="skills-text" data-i18n="resume.ss_doc_text">Structured test plans, traceability matrices, and technical reports — a discipline carried from civil works supervision</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Adaptability</h5>
+                <h5 class="h5" data-i18n="resume.ss_adapt_title">Adaptability</h5>
               </div>
-              <p class="skills-text">Transitioned from civil engineering to QA; comfortable learning new tools, domains, and workflows on the fly</p>
+              <p class="skills-text" data-i18n="resume.ss_adapt_text">Transitioned from civil engineering to QA; comfortable learning new tools, domains, and workflows on the fly</p>
             </li>
 
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Stakeholder Communication</h5>
+                <h5 class="h5" data-i18n="resume.ss_stakeholder_title">Stakeholder Communication</h5>
               </div>
-              <p class="skills-text">Translated specialist findings into actionable work instructions on-site; now communicates test outcomes to product and dev teams</p>
+              <p class="skills-text" data-i18n="resume.ss_stakeholder_text">Translated specialist findings into actionable work instructions on-site; now communicates test outcomes to product and dev teams</p>
             </li>
 
           </ul>
@@ -601,7 +609,7 @@
 
         <section class="certifications">
 
-          <h3 class="h3 certifications-title">Certifications</h3>
+          <h3 class="h3 certifications-title" data-i18n="resume.certifications">Certifications</h3>
 
           <div class="cert-group">
             <h4 class="h4 cert-org">Open Bootcamp</h4>
@@ -705,7 +713,7 @@
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title" data-i18n="portfolio.title">Portfolio</h2>
         </header>
 
         <section class="projects">
@@ -713,27 +721,27 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn data-filter-value="all" data-i18n="portfolio.filter_all">All</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Automation</button>
+              <button data-filter-btn data-filter-value="automation" data-i18n="portfolio.filter_automation">Automation</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>API Testing</button>
+              <button data-filter-btn data-filter-value="api testing" data-i18n="portfolio.filter_api">API Testing</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Manual Testing</button>
+              <button data-filter-btn data-filter-value="manual testing" data-i18n="portfolio.filter_manual">Manual Testing</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Mobile Testing</button>
+              <button data-filter-btn data-filter-value="mobile testing" data-i18n="portfolio.filter_mobile">Mobile Testing</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Backend</button>
+              <button data-filter-btn data-filter-value="backend" data-i18n="portfolio.filter_backend">Backend</button>
             </li>
 
           </ul>
@@ -742,7 +750,7 @@
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-selecct-value data-i18n="portfolio.select_category">Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -753,27 +761,27 @@
             <ul class="select-list">
 
               <li class="select-item">
-                <button data-select-item>All</button>
+                <button data-select-item data-filter-value="all" data-i18n="portfolio.filter_all">All</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Automation</button>
+                <button data-select-item data-filter-value="automation" data-i18n="portfolio.filter_automation">Automation</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>API Testing</button>
+                <button data-select-item data-filter-value="api testing" data-i18n="portfolio.filter_api">API Testing</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Manual Testing</button>
+                <button data-select-item data-filter-value="manual testing" data-i18n="portfolio.filter_manual">Manual Testing</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Mobile Testing</button>
+                <button data-select-item data-filter-value="mobile testing" data-i18n="portfolio.filter_mobile">Mobile Testing</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Backend</button>
+                <button data-select-item data-filter-value="backend" data-i18n="portfolio.filter_backend">Backend</button>
               </li>
 
             </ul>
@@ -793,9 +801,9 @@
                   <img src="./assets/images/project-9.png" alt="ui-automation" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">UI Automation — Urban Routes</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj1_title">UI Automation — Urban Routes</h3>
 
-                <p class="project-category">Automation</p>
+                <p class="project-category" data-i18n="portfolio.proj1_cat">Automation</p>
 
               </a>
             </li>
@@ -811,9 +819,9 @@
                   <img src="./assets/images/project-7.png" alt="api-automation" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">API Automation — Urban Grocers</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj2_title">API Automation — Urban Grocers</h3>
 
-                <p class="project-category">Automation</p>
+                <p class="project-category" data-i18n="portfolio.proj2_cat">Automation</p>
 
               </a>
             </li>
@@ -829,9 +837,9 @@
                   <img src="./assets/images/project-4.png" alt="api-testing" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">API Testing — Urban Grocers</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj3_title">API Testing — Urban Grocers</h3>
 
-                <p class="project-category">API Testing</p>
+                <p class="project-category" data-i18n="portfolio.proj3_cat">API Testing</p>
 
               </a>
             </li>
@@ -847,9 +855,9 @@
                   <img src="./assets/images/project-1.jpg" alt="regression-testing" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Regression Testing — Urban Routes</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj4_title">Regression Testing — Urban Routes</h3>
 
-                <p class="project-category">Manual Testing</p>
+                <p class="project-category" data-i18n="portfolio.proj4_cat">Manual Testing</p>
 
               </a>
             </li>
@@ -865,9 +873,9 @@
                   <img src="./assets/images/project-5.png" alt="test-design" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Test Design — Carpool Feature</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj5_title">Test Design — Carpool Feature</h3>
 
-                <p class="project-category">Manual Testing</p>
+                <p class="project-category" data-i18n="portfolio.proj5_cat">Manual Testing</p>
 
               </a>
             </li>
@@ -883,9 +891,9 @@
                   <img src="./assets/images/project-3.jpg" alt="cross-browser-testing" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Cross-Browser Testing — Urban Routes</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj6_title">Cross-Browser Testing — Urban Routes</h3>
 
-                <p class="project-category">Manual Testing</p>
+                <p class="project-category" data-i18n="portfolio.proj6_cat">Manual Testing</p>
 
               </a>
             </li>
@@ -901,9 +909,9 @@
                   <img src="./assets/images/project-8.jpg" alt="mobile-testing" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Mobile Testing — Urban Lunch</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj7_title">Mobile Testing — Urban Lunch</h3>
 
-                <p class="project-category">Mobile Testing</p>
+                <p class="project-category" data-i18n="portfolio.proj7_cat">Mobile Testing</p>
 
               </a>
             </li>
@@ -919,9 +927,9 @@
                   <img src="./assets/images/project-6.png" alt="console-sql" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Console & SQL — Linux + PostgreSQL</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj8_title">Console & SQL — Linux + PostgreSQL</h3>
 
-                <p class="project-category">Manual Testing</p>
+                <p class="project-category" data-i18n="portfolio.proj8_cat">Manual Testing</p>
 
               </a>
             </li>
@@ -937,9 +945,9 @@
                   <img src="./assets/images/project-2.png" alt="full-qa-cycle" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Full QA Cycle — Urban Scooter</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj9_title">Full QA Cycle — Urban Scooter</h3>
 
-                <p class="project-category">API Testing</p>
+                <p class="project-category" data-i18n="portfolio.proj9_cat">API Testing</p>
 
               </a>
             </li>
@@ -955,9 +963,9 @@
                   <img src="./assets/images/project-fcc-1.png" alt="metric-imp-converter" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Metric-IMP Converter</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj10_title">Metric-IMP Converter</h3>
 
-                <p class="project-category">REST API — Node.js / Express / Mocha</p>
+                <p class="project-category" data-i18n="portfolio.proj10_cat">REST API — Node.js / Express / Mocha</p>
 
               </a>
             </li>
@@ -973,9 +981,9 @@
                   <img src="./assets/images/project-fcc-2.png" alt="issue-tracker" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Issue Tracker</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj11_title">Issue Tracker</h3>
 
-                <p class="project-category">REST API — CRUD / Query Filters</p>
+                <p class="project-category" data-i18n="portfolio.proj11_cat">REST API — CRUD / Query Filters</p>
 
               </a>
             </li>
@@ -991,9 +999,9 @@
                   <img src="./assets/images/project-fcc-3.png" alt="personal-library" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Personal Library</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj12_title">Personal Library</h3>
 
-                <p class="project-category">REST API — Books / Comments</p>
+                <p class="project-category" data-i18n="portfolio.proj12_cat">REST API — Books / Comments</p>
 
               </a>
             </li>
@@ -1009,9 +1017,9 @@
                   <img src="./assets/images/project-fcc-4.png" alt="sudoku-solver" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Sudoku Solver</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj13_title">Sudoku Solver</h3>
 
-                <p class="project-category">Backtracking Algorithm — Node.js</p>
+                <p class="project-category" data-i18n="portfolio.proj13_cat">Backtracking Algorithm — Node.js</p>
 
               </a>
             </li>
@@ -1027,9 +1035,9 @@
                   <img src="./assets/images/project-fcc-5.png" alt="american-british-translator" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">US-UK Translator</h3>
+                <h3 class="project-title" data-i18n="portfolio.proj14_title">US-UK Translator</h3>
 
-                <p class="project-category">Regex / Dictionaries — Node.js</p>
+                <p class="project-category" data-i18n="portfolio.proj14_cat">Regex / Dictionaries — Node.js</p>
 
               </a>
             </li>
@@ -1049,12 +1057,12 @@
       <article class="contact" data-page="contact">
 
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="h2 article-title" data-i18n="contact.title">Contact</h2>
         </header>
 
         <section class="contact-info">
 
-          <p class="contact-text">
+          <p class="contact-text" data-i18n="contact.text">
             Let's connect! Whether you have a job opportunity, a project idea, or just want to talk about QA,
             feel free to reach out through any of the channels below.
           </p>
@@ -1066,7 +1074,7 @@
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
               <div class="contact-info">
-                <h3 class="h4 contact-item-title">Email — Outlook</h3>
+                <h3 class="h4 contact-item-title" data-i18n="contact.email_outlook">Email — Outlook</h3>
                 <a href="mailto:amluis16@outlook.com" class="contact-link">amluis16@outlook.com</a>
               </div>
             </li>
@@ -1076,7 +1084,7 @@
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
               <div class="contact-info">
-                <h3 class="h4 contact-item-title">Email — Gmail</h3>
+                <h3 class="h4 contact-item-title" data-i18n="contact.email_gmail">Email — Gmail</h3>
                 <a href="mailto:lmanco16@gmail.com" class="contact-link">lmanco16@gmail.com</a>
               </div>
             </li>
@@ -1086,7 +1094,7 @@
                 <ion-icon name="phone-portrait-outline"></ion-icon>
               </div>
               <div class="contact-info">
-                <h3 class="h4 contact-item-title">Phone</h3>
+                <h3 class="h4 contact-item-title" data-i18n="contact.phone">Phone</h3>
                 <a href="tel:+573024359784" class="contact-link">+57 302 435 9784</a>
               </div>
             </li>
@@ -1096,7 +1104,7 @@
                 <ion-icon name="logo-linkedin"></ion-icon>
               </div>
               <div class="contact-info">
-                <h3 class="h4 contact-item-title">LinkedIn</h3>
+                <h3 class="h4 contact-item-title" data-i18n="contact.linkedin">LinkedIn</h3>
               <a href="https://www.linkedin.com/in/amluis16" target="_blank" class="contact-link">amluis16</a>
               </div>
             </li>
@@ -1106,7 +1114,7 @@
                 <ion-icon name="logo-github"></ion-icon>
               </div>
               <div class="contact-info">
-                <h3 class="h4 contact-item-title">GitHub</h3>
+                <h3 class="h4 contact-item-title" data-i18n="contact.github">GitHub</h3>
                 <a href="https://github.com/AMluisXVI" target="_blank" class="contact-link">AMluisXVI</a>
               </div>
             </li>
